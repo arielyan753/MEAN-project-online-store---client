@@ -1,0 +1,146 @@
+.main {
+    height: 97%;
+    width: 99%;
+    box-sizing: border-box;
+    display: flex;
+    align-items: stretch;
+    border: none;
+
+}
+
+div {
+    margin: 10px;
+}
+
+.buy-here {
+    flex-grow: 1;
+    width: 15%;
+    font-size: larger;
+    text-align: left;
+    padding: 10px;
+    margin: 10px;
+    padding-left: 25px;
+    background-image: radial-gradient(circle 993px at 0.5% 50.5%, rgba(137, 171, 245, 0.856) 0%, rgba(245, 247, 252, 1) 100.2%);
+}
+
+.register {
+    flex-grow: 1;
+    width: 10%;
+    background-image: radial-gradient(circle 993px at 0.5% 50.5%, rgba(137, 171, 245, 0.856) 0%, rgba(245, 247, 252, 1) 100.2%);
+}
+
+.more-info {
+    width: 5%;
+    flex-grow: 1;
+    background-image: radial-gradient(circle 993px at 0.5% 50.5%, rgba(137, 171, 245, 0.856) 0%, rgba(245, 247, 252, 1) 100.2%);
+}
+
+mat-icon {
+    font-size: small;
+}
+
+h2 {
+    text-align: center;
+}
+
+img {
+    width: 45%;
+    border-radius: 15px;
+}
+
+.imageStore {
+    border: none;
+    text-align: center
+}
+
+.toShop {
+    padding: 5px;
+    margin: 20px;
+    flex: 1 1 auto;
+    margin: 10px;
+    padding: 30px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;
+    /* text-shadow: 0px 0px 10px rgba(0,0,0,0.2);*/
+    box-shadow: 0 0 20px #eee;
+    border-radius: 10px;
+}
+
+.btn:hover {
+    background-position: right center;
+    /* change the direction of the change here */
+}
+
+.btn-3 {
+    background-image: linear-gradient(to right, #5683f9 0%, #8fd3f4 51%, #3f6df5 100%);
+}
+
+mat-icon {
+    font-size: 25px;
+}
+.storeInfo{
+    font-size: larger;
+    border-radius: 7px;
+    background-image: radial-gradient(circle 993px at 0.5% 50.5%, rgba(213, 226, 255, 0.973) 0%, rgb(94, 153, 255) 100.2%);
+    display: inline-block;
+    margin: 10px;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+    padding: 10px;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;
+    /* text-shadow: 0px 0px 10px rgba(0,0,0,0.2);*/
+    border-radius: 10px;
+}
+
+.storeInfo:hover {
+    background-position: right center;
+    /* change the direction of the change here */
+}
+
+.storeInfo {
+    background-image: linear-gradient(to right, #4fecd9 0%, #61bfb0 51%, #00ffad 100%);
+}
+.moreInfo {
+    font-size: larger;
+    border-radius: 7px;
+    background-image: radial-gradient(circle 993px at 0.5% 50.5%, rgba(213, 226, 255, 0.973) 0%, rgb(94, 153, 255) 100.2%);
+    display: inline-block;
+    margin: 10px;
+    padding: 10px;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;
+    /* text-shadow: 0px 0px 10px rgba(0,0,0,0.2);*/
+    border-radius: 10px;
+}
+
+.moreInfo:hover {
+    background-position: right center;
+    /* change the direction of the change here */
+}
+
+.moreInfo {
+    background-image: linear-gradient(to right, #5683f9 0%, #8fd3f4 51%, #3f6df5 100%);
+}
+
+.login {
+    display: inline-block;
+    margin: 10px;
+    padding: 10px;
+    border: none;
+    box-shadow: none;
+    text-decoration: underline;
+}
+
+.btn-outline-primary {
+    margin-left: 15px;
+}
+
+.color {
+    color: rgb(0, 0, 255);
+}

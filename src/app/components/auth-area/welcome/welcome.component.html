@@ -1,0 +1,86 @@
+<div class="main">
+
+    <!--here render register first if click on login show login and change flag for register so it doesn't show-->
+    <div class="register">
+        <app-register *ngIf="!flag && !shopflag"></app-register>
+        <app-login *ngIf="flag && !shopflag" (flagChanger)="test($event)"></app-login>
+        <br />
+        <div class="login box" *ngIf="!flag && !shopflag">
+            Already have an account?<button class="btn btn-outline-primary" (click)="handlerFlag()"
+                *ngIf="!flag && !shopflag">Login</button>
+        </div>
+        <button routerLink="/shop" class="btn btn-3 toShop" *ngIf="shopflag && user.role==='User'">Move to shop <br />
+            <mat-icon>shopping_cart</mat-icon>
+        </button>
+        <button routerLink="/admin" class="btn btn-3 toShop" *ngIf="shopflag && user.role==='Admin'">show admin screen
+            <br />
+            <mat-icon>assignment_ind</mat-icon>
+        </button>
+    </div>
+
+
+    <div class="buy-here">
+        <h2>Information About Us</h2>
+        <span>
+            <div>
+                ▪ online-store.com is Israel's English online supermarket delivery service covering all
+                of Israel and open 24 hours a day, 7 days a week!
+            </div>
+
+            <div class="color">
+                ▪ Our mission is to deliver quickly, quality goods for your convenience to make your day that much
+                easier.
+            </div>
+
+            <div>
+                ▪ Online-Store makes online grocery delivery and shopping fast and easy.
+            </div>
+
+            <div class="color">
+                ▪ We are a service that orders and facilitates delivery from existing kosher supermarkets
+                all over Israel to make ordering in your language easy for you.
+            </div>
+
+            <div>
+                ▪ Your orders are picked on the same day as delivery, ensuring freshness.
+            </div>
+
+            <div class="color">
+                ▪ As we grow, we commit to bringing you a wide range of quality products.
+            </div>
+
+            <div>
+                ▪ our English Online-Store is not a physical supermarket or store.
+            </div>
+
+            <div class="color">
+                ▪ Quality and convenience from the comfort of your own home.
+            </div>
+        </span>
+        <br />
+        <div class="imageStore">
+            <img src="../../../../assets/shops.png">
+        </div>
+
+    </div>
+
+    <!--show info of the user only after he logged in or registered-->
+    <div class="more-info">
+        <br />
+        <div class="imageStore">
+            <img src="../../../../assets/delivery.png">
+        </div>
+        <br />
+        <p class="storeInfo">Amount of products available in our store: {{productsLen}}</p>
+        <br />
+        <p class="storeInfo">Amount of submitted orders in our store: {{ordersLen}}</p>
+        <br />
+        <p *ngIf="shopflag" class="moreInfo">Welcome: {{user?.firstName}}</p><br />
+        <p *ngIf="shopflag" class="moreInfo">Your cart is from: {{cart?.date| date}}</p> <br />
+        <p *ngIf="shopflag" class="moreInfo">You have: {{cartLen}} Items in the cart</p> <br />
+        <p *ngIf="shopflag" class="moreInfo">You last purchase was on:{{lastOrder?.orderDate | date}}</p> <br />
+        <h1 *ngIf="newShopper <= 1 && shopflag">welcome to your first order! </h1>
+    </div>
+
+
+</div>

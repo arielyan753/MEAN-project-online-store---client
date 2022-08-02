@@ -1,0 +1,22 @@
+<span class="box">
+
+
+    <div>
+        <img [src]="productImagesUrl + product.imageName" />
+    </div><br />
+    <div class="name">
+        {{product.name}}
+    </div><br />
+    <div class="price">
+        Price: <span class="priceBox">{{product.price | currency}}</span>
+    </div>
+    <button *ngIf="user?.role === 'Admin'" class="btn btn btn-3 buyNow" (click)="sendProductId()">Edit</button>
+    <button *ngIf="!clicked && user?.role !== 'Admin'" (click)="buyNow()" class="btn btn-3 buyNow">Buy now</button>
+    <button *ngIf="clicked && user?.role !== 'Admin'" (click)="buyNow()" (click)="addProductToCart()"
+        class="btn btn-3 buyNow">Add to cart</button>
+    <div *ngIf="clicked" class="clicked">
+        <label>Quantity:&nbsp; </label>
+        <input type="number" name="amount" min="1" max="100" [(ngModel)]="amount" required step="1"
+            oninput="validity.valid||(value='');">
+    </div>
+</span>

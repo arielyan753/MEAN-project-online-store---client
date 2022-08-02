@@ -1,0 +1,48 @@
+<form (ngSubmit)="orderFunc()" #formOrder="ngForm">
+    <h2>order details</h2>
+    
+    <mat-form-field floatLabel="always" class="inputWidth" appearance="outline">
+        <mat-label for="city">Choose a city:</mat-label>
+
+        <input matInput placeholder="Double click for your's city" (dblclick)="bringCity()" list="city-list" id="city"
+            name="city" pattern="^({{cityPattern}})$" required [(ngModel)]="orderDetails.city" #cityBox="ngModel">
+        <datalist id="city-list">
+            <option *ngFor="let enum of cities | keyvalue" [value]="enum.value">{{enum.value}}</option>
+        </datalist>
+        <mat-hint align="end" *ngIf="cityBox.touched && cityBox.errors?.['required']">Missing city</mat-hint>
+        <mat-hint align="end" *ngIf="cityBox.touched && cityBox.errors?.['pattern']">Wrong city</mat-hint>
+    </mat-form-field>
+
+
+    <mat-form-field class="inputWidth" floatLabel="always" appearance="outline">
+        <mat-label>Street: </mat-label>
+        <input matInput placeholder="Double click for your's street" type="text" name="street" (dblclick)="bringCity()"
+            [(ngModel)]="orderDetails.street" minlength="2" maxlength="40" required #streetBox="ngModel">
+        <mat-hint align="end" *ngIf="streetBox.touched && streetBox.errors?.['minlength']">Street name too short
+        </mat-hint>
+        <mat-hint align="end" *ngIf="streetBox.touched && streetBox.errors?.['maxlength']">Street name too long
+        </mat-hint>
+        <mat-hint align="end" *ngIf="streetBox.touched && streetBox.errors?.['required']">Missing Street name</mat-hint>
+    </mat-form-field>
+
+
+    <mat-form-field floatLabel="always" class="inputWidth" appearance="outline">
+        <mat-label>Shipping date: </mat-label>
+        <input matInput type="date" [(ngModel)]="orderDetails.shippingDate" required name="shippingDate"
+            #shippingBox="ngModel" min="{{currentDateToForm}}">
+        <mat-hint align="end" *ngIf="shippingBox.touched && shippingBox.errors?.['required']">Missing date</mat-hint>
+    </mat-form-field>
+
+    <mat-form-field floatLabel="always" class="inputWidth" appearance="outline">
+        <mat-label>Credit card</mat-label>
+        <input matInput type="string" placeholder="Please enter last 4 digits" [(ngModel)]="orderDetails.fourDigits"
+            required minlength="4" maxlength="4" name="creditCard" #creditBox="ngModel">
+        <mat-hint align="end" *ngIf="creditBox.touched && creditBox.errors?.['minlength']">Credit card most be 4 digits
+        </mat-hint>
+        <mat-hint align="end" *ngIf="creditBox.touched && creditBox.errors?.['maxlength']">Credit card most be 4 digits
+        </mat-hint>
+        <mat-hint align="end" *ngIf="creditBox.touched && creditBox.errors?.['required']">Missing Credit card</mat-hint>
+    </mat-form-field>
+    <button class="btn btn-outline-success" [disabled]="formOrder.invalid">Place order</button>
+
+</form>

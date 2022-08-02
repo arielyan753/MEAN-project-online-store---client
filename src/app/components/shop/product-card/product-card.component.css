@@ -1,0 +1,97 @@
+.box {
+    width: 300px;
+    height: 344px;
+    padding-right: 8px;
+    margin-right: 10px;
+    margin-left: 35px;
+    margin-bottom: 30px;
+    text-align: center;
+    background-color: #ffffff;
+    font-size: 150%;
+    border: none;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    position: relative;
+}
+
+.price {
+    font-family: 'Poppins', sans-serif;
+    padding-top: 5px;
+    font-weight: bolder;
+    font-size: large;
+    position: relative;
+    float: left;
+    left: 10%;
+}
+
+.priceBox {
+    color: rgb(6, 74, 138);
+    font-weight: 800;
+    font-family: 'Varela Round', sans-serif;
+}
+
+img {
+    width: 80%;
+    background-color: rgb(255, 255, 255);
+    height: 200px;
+    margin: 5px;
+    border-radius: 10px;
+    border: none;
+    vertical-align: middle;
+}
+
+.clicked {
+    position: absolute;
+    bottom: 15px;
+    background-color: #ffffff;
+    background-image: linear-gradient(160deg, #a5ccff 0%, #d2e0ff 100%);
+    padding: 5px;
+    border-radius: 7px;
+    width: 93.5%;
+}
+
+.buyNow {
+    position: relative;
+    left: 14%;
+    top: -3%;
+}
+
+.btn-outline-danger {
+    margin-top: 10px;
+}
+
+.btn-outline-primary {
+    margin-top: 15px;
+}
+
+.name {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 800;
+    position: relative;
+    float: left;
+    left: 10%;
+}
+
+.btn {
+    flex: 1 1 auto;
+    text-align: center;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;
+    box-shadow: 0 0 20px #eee;
+    border-radius: 10px;
+}
+
+.btn:hover {
+    background-position: right center;
+}
+
+.btn-3 {
+    background-image: linear-gradient(to right, #0046ff 0%, #6bbce4 51%, #3461e7 100%);
+}
+
+input {
+    border: none;
+    border-radius: 7px;
+    width: 20%;
+    height: 38px;
+}

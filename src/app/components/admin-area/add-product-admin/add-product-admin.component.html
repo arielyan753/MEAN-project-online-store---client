@@ -1,0 +1,48 @@
+<form (ngSubmit)="add()" #formInfo="ngForm">
+    <div>
+        <h2>Add Product</h2>
+        <mat-form-field floatLabel="always" class="inputWidth" appearance="outline">
+            <mat-label>Name: </mat-label>
+            <input matInput type="text" name="name" [(ngModel)]="product.name" required minlength="3" #nameBox="ngModel"
+                pattern="^[A-Z].+$">
+            <mat-hint align="end" *ngIf="nameBox.touched && nameBox.errors?.['pattern']">Name must begin with capital
+                letter</mat-hint>
+            <mat-hint align="end" *ngIf="nameBox.touched && nameBox.errors?.['required']">Missing name</mat-hint>
+            <mat-hint align="end" *ngIf="nameBox.touched && nameBox.errors?.['minlength']">Name too short</mat-hint>
+
+
+        </mat-form-field>
+
+        <mat-form-field floatLabel="always" class="inputWidth" appearance="outline">
+            <mat-label>Price: </mat-label>
+            <input matInput type="number" name="price" [(ngModel)]="product.price" step="0.1" required min="0"
+                max="1000" #priceBox="ngModel">
+            <mat-hint align="end" *ngIf="priceBox.touched && priceBox.errors?.['required']">Missing price</mat-hint>
+            <mat-hint align="end" *ngIf="priceBox.touched && priceBox.errors?.['min']">Price can't be negative
+            </mat-hint>
+            <mat-hint align="end" *ngIf="priceBox.touched && priceBox.errors?.['max']">Price can't exceed 1000
+            </mat-hint>
+        </mat-form-field>
+
+        <mat-form-field floatLabel="always" class="inputWidth" appearance="outline">
+            <mat-label>Category: </mat-label>
+            <mat-select name="category" [(ngModel)]="product.categoryId" #categoryBox="ngModel" required>
+                <mat-option disabled selected>Select</mat-option>
+                <mat-option *ngFor="let c of categories" value={{c._id}}>{{c.categoryName}}</mat-option>
+            </mat-select>
+            <mat-hint align="end" *ngIf="categoryBox.touched && categoryBox.errors?.['required']">Missing category
+            </mat-hint>
+        </mat-form-field>
+        <br>
+        <br>
+
+        <label>Image: </label>
+        <input type="file" name="image" #imageBox>
+
+
+        <button class="btn btn-3" [disabled]="formInfo.invalid">Add</button>
+    </div>
+
+
+
+</form>

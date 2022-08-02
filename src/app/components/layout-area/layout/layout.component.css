@@ -1,0 +1,21 @@
+div {
+    height: 100%;
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: 7% 5% 88%;
+    background-image: url("../../../../assets/background-4.png");
+}
+
+header {
+    grid-column: span 6;
+}
+
+aside {
+    grid-column: span 6;
+}
+
+main {
+    grid-column: span 6;
+    overflow: auto;
+}

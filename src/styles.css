@@ -1,0 +1,49 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    color: rgb(1, 36, 36);
+    background-image: radial-gradient(circle 993px at 0.5% 50.5%, rgba(137, 171, 245, 0.37) 0%, rgba(245, 247, 252, 1) 100.2%);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    overflow: auto;
+
+}
+
+body {
+    font-size: 10px;
+    font-weight: bold;
+}
+
+select, input {
+    font-size: large;
+}
+
+a {
+    color: blue;
+}
+
+.box {
+    display: inline-block;
+    margin: 10px;
+    padding: 0 10px;
+    border: 1px solid black;
+    border-radius: 8px;
+    box-shadow: 3px 3px 10px;
+    text-align: left;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+mark {
+    padding: 0;
+    background-color: rgb(247, 214, 125);
+}

@@ -1,0 +1,30 @@
+.list {
+  position: relative;
+  background-color: whitesmoke
+}
+
+.admin-form {
+  border-radius: 7px;
+  background-color: rgb(255, 255, 255);
+
+
+}
+
+button {
+  display: inline-block;
+  top: 2.5%;
+  left: 0.5%;
+  margin: 30px;
+  position: fixed;
+  z-index: 2;
+  background-image: linear-gradient(to top, #00c6fb 0%, #005bea 100%);
+}
+
+.add {
+  left: 4%;
+  top: 2.5%;
+}
+
+mat-drawer {
+  background-image: linear-gradient(to top, #cfbef8 0%, #fff6fc 100%);
+}

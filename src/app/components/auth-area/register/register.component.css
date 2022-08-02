@@ -1,0 +1,48 @@
+form {
+    width: 250px;
+    height: 65%;
+}
+
+h2 {
+    text-align: center;
+}
+
+input, select {
+    width: 100%;
+    box-sizing: border-box;
+    margin: 0 0 10px 0;
+    font-size: 15px;
+}
+
+button {
+    width: 100%;
+    margin: 10px 0 20px 0;
+}
+
+mat-hint:not(.old-color) {
+    color: red;
+}
+
+input::placeholder {
+    font-weight: bold;
+    opacity: .5;
+    font-size: smaller;
+}
+
+.inputWidth {
+    width: 100%;
+}
+
+a {
+    text-decoration: none;
+}
+
+.welcome {
+    border: none;
+}
+
+.registerFrom {
+    padding-top: 8px;
+    margin-top: 30px;
+    background-color: whitesmoke;
+}

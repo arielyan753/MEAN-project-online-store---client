@@ -1,0 +1,113 @@
+<div class="box registerFrom">
+
+    <h2>Register</h2>
+
+    <div *ngIf="!flag">
+        <!--this is the first step of register after it is completed step 2 will show and change the flag-->
+        <form (ngSubmit)="register1()" #formInfo1="ngForm">
+
+            <mat-form-field floatLabel="always" class="inputWidth" appearance="outline">
+                <mat-label>ID: </mat-label>
+                <input matInput type="text" name="id" [(ngModel)]="userDataReg1.id" pattern="\d{9}" #idBox="ngModel"
+                    required>
+                <mat-hint align="end" *ngIf="idBox.touched && idBox.errors?.['pattern']">Wrong ID number</mat-hint>
+                <mat-hint align="end" *ngIf="idBox.touched && idBox.errors?.['required']">Missing ID number</mat-hint>
+            </mat-form-field>
+
+            <mat-form-field floatLabel="always" class="inputWidth" appearance="outline">
+                <mat-label>Email: </mat-label>
+                <input matInput type="email" name="email" [(ngModel)]="userDataReg1.email"
+                    pattern="^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+.[a-zA-Z0-9-.]+$" required #emailBox="ngModel">
+                <mat-hint align="end" *ngIf="emailBox.touched && emailBox.errors?.['pattern']">Wrong Mail</mat-hint>
+                <mat-hint align="end" *ngIf="emailBox.touched && emailBox.errors?.['required']">Missing Mail</mat-hint>
+            </mat-form-field>
+
+            <mat-form-field floatLabel="always" class="inputWidth" appearance="outline">
+                <mat-label>Password: </mat-label>
+                <input matInput type="password" name="password" [(ngModel)]="userDataReg1.password" minlength="8"
+                    required #passwordBox="ngModel">
+                <mat-hint align="end" *ngIf="passwordBox.touched && passwordBox.errors?.['minlength']">Password is to
+                    short</mat-hint>
+                <mat-hint align="end" *ngIf="passwordBox.touched && passwordBox.errors?.['required']">Missing Password
+                </mat-hint>
+            </mat-form-field>
+
+            <mat-form-field floatLabel="always" class="inputWidth" appearance="outline">
+                <mat-label>Confirm password: </mat-label>
+                <input matInput type="password" name="conpassword" [(ngModel)]="userDataReg1.confirmedPassword"
+                    minlength="8" required #conpasswordBox="ngModel">
+                <mat-hint align="end" *ngIf="conpasswordBox.touched && conpasswordBox.errors?.['minlength']">Password is
+                    to short</mat-hint>
+                <mat-hint align="end" *ngIf="conpasswordBox.touched && conpasswordBox.errors?.['required']">Missing
+                    Password</mat-hint>
+            </mat-form-field>
+
+            <button mat-stroked-button [disabled]="formInfo1.invalid">Next</button>
+
+        </form>
+    </div>
+
+    <div *ngIf="flag">
+        <!--this is the second step of register at submit the function will add him to the database  -->
+        <form (ngSubmit)="register2()" #formInfo2="ngForm">
+
+            <mat-form-field floatLabel="always" class="inputWidth" appearance="outline">
+                <mat-label>First name: </mat-label>
+                <input matInput type="text" name="firstName" [(ngModel)]="userDataReg2.firstName" pattern="^[A-Z].+$"
+                    minlength="2" maxlength="40" #firstNameBox="ngModel" required>
+                <mat-hint align="end" *ngIf="firstNameBox.touched && firstNameBox.errors?.['pattern']">Name must begin
+                    with capital letter</mat-hint>
+                <mat-hint align="end" *ngIf="firstNameBox.touched && firstNameBox.errors?.['minlength']">Name too short
+                </mat-hint>
+                <mat-hint align="end" *ngIf="firstNameBox.touched && firstNameBox.errors?.['maxlength']">Name too long
+                </mat-hint>
+                <mat-hint align="end" *ngIf="firstNameBox.touched && firstNameBox.errors?.['required']">Missing name
+                </mat-hint>
+            </mat-form-field>
+
+            <mat-form-field floatLabel="always" class="inputWidth" appearance="outline">
+                <mat-label>Last name: </mat-label>
+                <input matInput type="text" name="lastName" [(ngModel)]="userDataReg2.lastName" pattern="^[A-Z].+$"
+                    minlength="2" maxlength="40" #lastNameBox="ngModel" required>
+                <mat-hint align="end" *ngIf="lastNameBox.touched && lastNameBox.errors?.['pattern']">Name must begin
+                    with capital letter</mat-hint>
+                <mat-hint align="end" *ngIf="lastNameBox.touched && lastNameBox.errors?.['minlength']">Name too short
+                </mat-hint>
+                <mat-hint align="end" *ngIf="lastNameBox.touched && lastNameBox.errors?.['maxlength']">Name too long
+                </mat-hint>
+                <mat-hint align="end" *ngIf="lastNameBox.touched && lastNameBox.errors?.['required']">Missing name
+                </mat-hint>
+            </mat-form-field>
+
+            <mat-form-field floatLabel="always" class="inputWidth" appearance="outline">
+                <mat-label>City: </mat-label>
+                <mat-select [(ngModel)]="userDataReg2.city" name="city" #cityBox="ngModel" required>
+                    <mat-option disabled selected>Select...</mat-option>
+                    <mat-option *ngFor="let enum of cities | keyvalue" [value]="enum.value">{{enum.value}}</mat-option>
+                </mat-select>
+                <mat-hint align="end" *ngIf="cityBox.errors?.['required'] && cityBox.touched">Missing city</mat-hint>
+            </mat-form-field>
+            <br>
+            <br>
+
+            <mat-form-field floatLabel="always" class="inputWidth" appearance="outline">
+                <mat-label>Street: </mat-label>
+                <input matInput type="text" name="street" [(ngModel)]="userDataReg2.street" minlength="2" maxlength="40"
+                    required #streetBox="ngModel">
+                <mat-hint align="end" *ngIf="streetBox.touched && streetBox.errors?.['minlength']">Street name too short
+                </mat-hint>
+                <mat-hint align="end" *ngIf="streetBox.touched && streetBox.errors?.['maxlength']">Street name too long
+                </mat-hint>
+                <mat-hint align="end" *ngIf="streetBox.touched && streetBox.errors?.['required']">Missing Street name
+                </mat-hint>
+            </mat-form-field>
+
+            <button mat-raised-button color="primary" [disabled]="formInfo2.invalid">Register</button>
+
+        </form>
+    </div>
+
+
+
+
+</div>

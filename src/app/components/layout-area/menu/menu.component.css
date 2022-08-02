@@ -1,0 +1,27 @@
+div {
+    height: 100%;
+    font-size: 25px;
+    text-align: center;
+}
+
+.menuSpan {
+
+    position: relative;
+}
+
+button {
+    margin-right: 15px;
+    background: none;
+    font-weight: bold;
+    color: rgb(0, 0, 0);
+    border: none;
+    font-family: 'Mochiy Pop One', sans-serif;
+    text-shadow: 2px 2px 2px #000000;
+    color: rgb(240, 241, 255);
+    font-size: 24px;
+    border: 0px solid;
+}
+
+button:hover {
+    color: rgb(59, 180, 250);
+}

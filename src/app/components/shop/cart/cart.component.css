@@ -1,0 +1,97 @@
+div {
+    font-size: larger;
+}
+
+
+table {
+    display: inline-block;
+    overflow: auto;
+    font-size: larger;
+    border-radius: 8px;
+    width: 95%;
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+}
+
+td {
+    border: none;
+    border-radius: 8px;
+}
+
+th {
+    color: rgb(233, 233, 233);
+}
+
+tr:nth-child(even) {
+    background-image: radial-gradient(circle 993px at 0.5% 50.5%, rgb(184, 207, 255) 0%, rgb(247 250 255) 100.2%);
+}
+
+tbody {
+    background-image: radial-gradient(circle 993px at 0.5% 50.5%, rgba(152, 184, 253, 0.76) 0%, rgb(247 250 255) 100.2%);
+}
+
+.totalPrice {
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+    background-image: radial-gradient(circle 993px at 0.5% 50.5%, rgb(210, 235, 255) 0%, rgb(247 250 255) 100.2%);
+    position: relative;
+    width: 456px;
+    margin: 10px;
+    padding: 13px;
+    display: inline-block;
+    top: 15px;
+    border-radius: 7px;
+}
+
+.clearCart {
+    font-size: 22px;
+}
+
+.openClose {
+    margin-right: 25px;
+}
+
+.btn {
+    flex: 1 1 auto;
+    text-align: center;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;
+    box-shadow: 0 0 20px #eee;
+    border-radius: 10px;
+}
+
+.btn:hover {
+    background-position: right center;
+}
+
+.btn-3 {
+    background-image: linear-gradient(to right, #ff0000 0%, #ff774e 51%, #ff2828 100%);
+    margin-bottom: 30px;
+    margin-left: 36px;
+}
+
+.btn-4 {
+    background-image: linear-gradient(to right, #00a51b 0%, #33da86 51%, #0d9900 100%);
+    margin-top: 10px;
+}
+
+img {
+    height: 25px;
+}
+
+.shopImg {
+    height: 50px;
+    position: relative;
+    top: -14px;
+    right: -52%;
+}
+
+.clear>span {
+    font-family: 'BioRhyme', serif;
+    position: relative;
+    right: 10%;
+    top: -8px;
+    color: rgb(255, 255, 255);
+    font-size: 34px;
+    text-shadow: 2px 2px 2px #000000;
+    z-index: 0;
+}

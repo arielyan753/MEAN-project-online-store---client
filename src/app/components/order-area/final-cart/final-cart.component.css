@@ -1,0 +1,86 @@
+div {
+    margin: 10px;
+
+}
+
+mat-form-field {
+    position: relative;
+    left: -25%;
+}
+
+table {
+    display: inline-block;
+    font-size: x-large;
+    border-radius: 8px;
+    box-shadow: 5px 5px 10px;
+    overflow: auto;
+}
+
+td {
+    border: none;
+    height: 35px;
+}
+
+th {
+    color: white;
+    color: white;
+    background-color: #2351a1;
+}
+
+tr:nth-child(even) {
+    background-image: radial-gradient(circle 993px at 0.5% 50.5%, rgb(98, 131, 203) 0%, rgb(247 250 255) 100.2%);
+}
+
+tbody {
+    background-image: radial-gradient(circle 993px at 0.5% 50.5%, rgba(146, 180, 252, 0.76) 0%, rgb(247 250 255) 100.2%);
+    border-radius: 7px;
+}
+
+thead {
+    border-radius: 7px;
+}
+
+.totalPrice {
+    box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgb(0 0 0 / 0%);
+    background-color: #2cb1ff;
+    background-image: linear-gradient(160deg, #00a1ff 0%, #9cfff4 100%);
+    position: relative;
+    font-size: larger;
+    width: 27%;
+    margin: 10px;
+    padding: 13px;
+    display: inline-block;
+    top: 15px;
+    border-radius: 7px;
+}
+
+img {
+    height: 20px;
+}
+
+.btn {
+    flex: 1 1 auto;
+    text-align: center;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;
+    box-shadow: 0 0 20px #eee;
+    border-radius: 10px;
+    display: inline-block;
+    position: relative;
+    float: left;
+    left: 52px;
+}
+
+.btn:hover {
+    background-position: right center;
+}
+
+.btn-4 {
+    background-image: linear-gradient(to right, #5794f9 0%, #8cd6f9 51%, #488eff 100%);
+}
+
+.divTable {
+    height: 400px;
+    overflow: auto;
+}

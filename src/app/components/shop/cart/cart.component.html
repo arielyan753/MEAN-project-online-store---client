@@ -1,0 +1,18 @@
+<br>
+<br>
+<span class="clear">
+    <img class="shopImg" src="../../../../assets/shoppingCart.png">
+    <span>Ariel Market</span>
+    <button class="btn btn-3" (click)="clearCart()">Clear cart <mat-icon class="clearCart"><img
+                src="../../../../assets/delete.png"></mat-icon></button>
+</span>
+<table>
+    <tbody>
+        <tr app-cart-details-row *ngFor="let c of cartDetails" [cartProduct]="c"></tr>
+    </tbody>
+
+</table>
+<div class="totalPrice">
+    Total price: {{totalPrice | currency}} <br />
+    <a routerLink="/order"><button class="btn btn-4">Order</button></a>
+</div>

@@ -1,0 +1,19 @@
+<mat-drawer-container>
+  <mat-drawer [(opened)]="opened" mode="side"> <!--whats inside of the drawer-->
+    <div class='addOrUpdate'>
+      <app-update-product-admin [product]=product *ngIf="flag"></app-update-product-admin>
+      <app-add-product-admin *ngIf="flagSec"></app-add-product-admin>
+    </div>
+  </mat-drawer>
+  <mat-drawer-content> <!--whats outside of the drawer-->
+    <div class='list stickyBar'>
+      <button type="button" mat-fab (click)="showAddForm()" class="add">
+        <mat-icon>add</mat-icon>
+      </button>
+      <button type="button" mat-fab (click)="opened=!opened">
+        <mat-icon>keyboard_arrow_left</mat-icon>
+      </button>
+      <app-products-list (report)="handlerProductId($event)" (test)="handlerProductId2($event)"></app-products-list>
+    </div>
+  </mat-drawer-content>
+</mat-drawer-container>

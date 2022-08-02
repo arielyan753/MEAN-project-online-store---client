@@ -1,0 +1,40 @@
+.list {
+  position: relative;
+  background-color: #bbd6ff52;
+}
+
+.cart {
+  height: 100%;
+  width: 100%;
+  border-radius: 7px;
+  background-image: linear-gradient(358.7deg, rgb(255 255 255) 1.7%, rgb(203 239 255) 51.1%, rgb(177 226 250) 95.5%);
+}
+
+button {
+  display: inline-block;
+  top: 0%;
+  left: 0.5%;
+  margin: 30px;
+  position: fixed;
+  z-index: 2;
+}
+
+.mat-fab.mat-accent {
+  background-image: linear-gradient(to right, #4facfe 0%, #00f2fe 100%);
+}
+
+img {
+  height: 26px;
+  position: relative;
+  bottom: 5px;
+  right: 2px;
+}
+
+mat-drawer-container {
+  height: 100%;
+  background-color: whitesmoke;
+}
+
+mat-drawer {
+  width: 480px;
+}

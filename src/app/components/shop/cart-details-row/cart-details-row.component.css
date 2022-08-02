@@ -1,0 +1,57 @@
+input {
+  width: 43%;
+  border-radius: 5px;
+}
+
+button {
+  border: none;
+}
+
+.totalAmount {
+  width: 10%;
+}
+
+.amount {
+  width: 5%;
+}
+
+.edit {
+  background-image: linear-gradient(to top, #00c6fb 0%, #005bea 100%);
+}
+
+.changeAmount {
+  width: 30%;
+}
+
+.deleteTdP {
+  width: 5%;
+}
+
+.delete {
+  background-image: linear-gradient(to top, #ff0844 0%, #ffb199 100%);
+}
+
+img {
+  height: 20px;
+  position: relative;
+  bottom: 7px;
+}
+
+.name {
+  position: relative;
+  width: 30%;
+}
+
+.name>img {
+  position: absolute;
+  left: 11px;
+  top: 8px;
+  width: 30px;
+  height: 30px;
+  border-radius: 7px;
+}
+
+.name>span {
+  position: relative;
+  left: 17px;
+}

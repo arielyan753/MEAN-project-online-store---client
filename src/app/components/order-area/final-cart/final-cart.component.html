@@ -1,0 +1,36 @@
+<main>
+    <br />
+    <br />
+    <div>
+        <a routerLink="/shop"><button class="btn btn-4"><img src="../../../../assets/previous.png">&nbsp; Back to
+                shop</button></a>
+    </div><br /><br /> <br />
+    <mat-form-field floatLabel="always" class="inputWidth" appearance="fill">
+        <mat-label>Search...</mat-label>
+        <input matInput placeholder="Search in cart..." type="text" name='search' [(ngModel)]="search">
+    </mat-form-field><br />
+    <div class="divTable">
+        <table>
+            <thead>
+                <tr>
+                    <th>Product</th>
+                    <th>Amount &nbsp;</th>
+                    <th>Total Price</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let c of cartDetails">
+                    <td innerHTML="{{c.name | highlight : search}}">{{c.name}}</td>
+                    <td>{{c.amount}}</td>
+                    <td>{{c.totalPrice.toFixed(2) | currency}}</td>
+                </tr>
+            </tbody>
+
+        </table>
+    </div>
+
+
+    <div class="totalPrice">
+        Total price: {{totalPrice2 | currency}}
+    </div>
+</main>

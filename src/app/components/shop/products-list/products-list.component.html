@@ -1,0 +1,24 @@
+<div class="shopping">
+
+    <br />
+    <span class="iconSearch">
+        <mat-icon>search</mat-icon>
+    </span>
+    <span class="search">
+        <input type="text" placeholder="Search for product..." [(ngModel)]="searchInput" name="searchInput"
+            (keyup)="searchByInput(searchInput)">
+    </span>
+    <span class="categories box">
+        <button class="btn btn-outline-light" (click)="getAllProducts()"><img src="../../../../assets/all.png"></button>
+        <button class="btn btn-outline-light" *ngFor="let c of categories"
+            (click)="getProductByCategory(c._id)">{{c.categoryName}}&nbsp; <img
+                src='../../../../assets/{{c.categoryName}}.png' alt=""></button>
+    </span>
+</div>
+<br />
+<div>
+    <app-loading *ngIf='productsLen === 0'></app-loading>
+    <app-product-card *ngFor="let p of products" [product]="p" (report)="handlerProductId($event)"
+        (test)="handlerProductId2($event)"></app-product-card>
+
+</div>

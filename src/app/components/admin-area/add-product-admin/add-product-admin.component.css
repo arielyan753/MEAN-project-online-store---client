@@ -1,0 +1,68 @@
+form {
+    width: 250px;
+    margin: 20px;
+    padding: 20px;
+    display: inline-block;
+    border-radius: 8px;
+}
+
+h2 {
+    text-align: center;
+}
+
+input {
+    width: 100%;
+    box-sizing: border-box;
+    margin: 0 0 10px 0;
+    font-size: 15px;
+}
+
+button {
+    width: 100%;
+    margin: 10px 0 20px 0;
+}
+
+mat-hint:not(.old-color) {
+    color: red;
+}
+
+input::placeholder {
+    font-weight: bold;
+    opacity: .5;
+    font-size: smaller;
+}
+
+.inputWidth {
+    width: 100%;
+}
+
+div {
+    position: fixed;
+    width: 250px;
+    margin: 20px;
+    padding: 20px;
+    display: inline-block;
+    text-align: center;
+    left: 9.5px;
+
+}
+
+.btn {
+    flex: 1 1 auto;
+    text-align: center;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;
+    /* text-shadow: 0px 0px 10px rgba(0,0,0,0.2);*/
+    box-shadow: 0 0 20px #eee;
+    border-radius: 10px;
+}
+
+.btn:hover {
+    background-position: right center;
+    /* change the direction of the change here */
+}
+
+.btn-3 {
+    background-image: linear-gradient(to right, #0097ff 0%, #3344da 51%, #0a90fb 100%);
+}

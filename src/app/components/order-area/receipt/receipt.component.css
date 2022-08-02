@@ -1,0 +1,25 @@
+.bgColor {
+    background-color: rgba(58, 157, 250, 0.411);
+    border-color: darkblue;
+    color: darkblue;
+}
+
+.bgColor:hover {
+    background-color: rgba(251, 253, 255, 0.411);
+    border-color: darkblue;
+    color: rgb(0, 0, 0);
+}
+
+div {
+    background-color: rgb(212, 241, 255);
+    border-radius: 7px;
+    display: inline-block;
+    text-align: center;
+    padding: 25px;
+    margin: 5px;
+}
+
+span {
+    font-size: x-large;
+    font-family: 'BioRhyme', serif;
+}

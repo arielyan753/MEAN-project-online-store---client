@@ -1,0 +1,29 @@
+div {
+    flex-direction: column;
+    justify-content: center;
+}
+
+h1 {
+    position: relative;
+    top: 25px;
+    font-family: 'BioRhyme', serif;
+    color: rgb(255, 255, 255);
+    font-size: 55px;
+    text-shadow: 2px 2px 2px #000000;
+    width: 21%;
+    right: -40%;
+}
+
+img {
+    position: absolute;
+    top: 0%;
+    right: 61%;
+    width: 100px;
+    height: 100px;
+
+}
+
+a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+}

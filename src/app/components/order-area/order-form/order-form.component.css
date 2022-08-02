@@ -1,0 +1,44 @@
+form {
+    width: 300px;
+    margin: 20px;
+    padding: 20px;
+    display: inline-block;
+    border-radius: 8px;
+    border: 1px solid black;
+    background-color: whitesmoke;
+    margin-top: 13%;
+}
+
+h2 {
+    text-align: center;
+}
+
+input, select {
+    width: 100%;
+    box-sizing: border-box;
+    margin: 0 0 10px 0;
+    font-size: 15px;
+}
+
+button {
+    width: 100%;
+    margin: 10px 0 20px 0;
+}
+
+mat-hint:not(.old-color) {
+    color: red;
+}
+
+a {
+    text-decoration: none;
+}
+
+input::placeholder {
+    font-weight: bold;
+    opacity: .5;
+    font-size: smaller;
+}
+
+.inputWidth {
+    width: 100%;
+}

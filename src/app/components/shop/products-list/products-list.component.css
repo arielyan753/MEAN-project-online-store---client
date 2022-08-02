@@ -1,0 +1,63 @@
+button {
+    margin: 10px;
+    border: none;
+    color: rgb(0, 123, 255);
+}
+
+.search {
+    position: fixed;
+    top: 65px;
+    left: 14%;
+    z-index: 2;
+    background-color: rgba(245, 245, 245, 0.849);
+    border-radius: 10px;
+}
+
+input {
+    border: none;
+    border-radius: 7px;
+    opacity: 0.3;
+    height: 35px;
+}
+
+
+.categories {
+    position: relative;
+    border: none;
+    text-align: center;
+    box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
+    right: -6%;
+    background-color: #e0dfdf;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;
+    border-radius: 10px;
+}
+
+.categories:hover {
+    background-position: right center;
+}
+
+.categories {
+    background-image: linear-gradient(to right, #d4e0ff 0%, #8fd3f4 51%, #d3deff 100%);
+}
+
+img {
+    width: 30px;
+    height: 30px;
+}
+
+.shopping {
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.iconSearch {
+    position: fixed;
+    left: 12%;
+    top: 72px;
+}
+
+mat-form-field {
+    height: 70px;
+}

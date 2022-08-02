@@ -1,0 +1,28 @@
+.main {
+    height: 100%;
+
+    box-sizing: border-box;
+    display: flex;
+    align-items: stretch;
+    margin: 25px;
+    border: none;
+    background-color: rgb(212, 212, 212);
+}
+
+div {
+
+    border-radius: 7px;
+    margin: 10px;
+}
+
+.cart {
+    flex-grow: 2;
+    background-color: #eef4fffb;
+
+}
+
+.order-form {
+    flex-grow: 2;
+    background-color: #eef4fffb;
+
+}

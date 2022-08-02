@@ -1,0 +1,35 @@
+<div class="box login">
+
+    <h2>Login</h2>
+
+    <form (ngSubmit)="submit()" #formInfo3="ngForm">
+
+        <mat-form-field floatLabel="always" class="inputWidth" appearance="outline">
+            <mat-label>Email: </mat-label>
+            <input matInput type="email" name="email" [(ngModel)]="credentials.email"
+                pattern="^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+.[a-zA-Z0-9-.]+$" required #emailBox="ngModel">
+            <mat-hint align="end" *ngIf="emailBox.touched && emailBox.errors?.['pattern']">Wrong Mail</mat-hint>
+            <mat-hint align="end" *ngIf="emailBox.touched && emailBox.errors?.['required']">Missing Mail number
+            </mat-hint>
+        </mat-form-field>
+
+
+
+        <mat-form-field floatLabel="always" class="inputWidth" appearance="outline">
+            <mat-label>Password: </mat-label>
+            <input matInput type="password" name="password" [(ngModel)]="credentials.password" minlength="8" required
+                #passwordBox="ngModel">
+            <mat-hint align="end" *ngIf="passwordBox.touched && passwordBox.errors?.['minlength']">Password is to short
+            </mat-hint>
+            <mat-hint align="end" *ngIf="passwordBox.touched && passwordBox.errors?.['required']">Missing Password
+            </mat-hint>
+        </mat-form-field>
+
+        <button mat-raised-button color="primary" [disabled]="formInfo3.invalid">Login</button>
+
+    </form>
+    <div>
+        Don't have an account? <button class="btn btn-outline-primary" (click)="changeFlag()">register</button>
+    </div>
+    <br />
+</div>
